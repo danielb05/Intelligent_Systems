@@ -226,6 +226,8 @@ class ApproximateQAgent(PacmanQAgent):
 
         features = self.featExtractor.getFeatures(state, action)
 
+        # A copy is made here, because otherwise the Autograder doesn't work, despite the fact that the code would still be correct
+        # this happens because the weights will change in the for loop
         difference = (reward + self.discount * self.getValue(nextState)) - self.getQValue(state, action)
 
         for feature in features:
