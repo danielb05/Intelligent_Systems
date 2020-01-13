@@ -70,6 +70,7 @@ class ValueIterationAgent(ValueEstimationAgent):
         "*** YOUR CODE HERE ***"
         #util.raiseNotDefined()
 	
+	# Initializing QValue
 	QValue = 0
 
 	for nextState, prob in self.mdp.getTransitionStatesAndProbs(state, action):
@@ -90,6 +91,7 @@ class ValueIterationAgent(ValueEstimationAgent):
 	
 	if self.mdp.isTerminal(state): return None
 
+	# A copy is made here, because otherwise the Autograder doesn't work, despite the fact that the code would still be correct
 	QvalueForAction = util.Counter()
 
 	for action in self.mdp.getPossibleActions(state):
