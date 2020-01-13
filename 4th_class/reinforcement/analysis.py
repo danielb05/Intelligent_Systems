@@ -32,44 +32,54 @@ def question3a():
     # answerLivingReward = None
     # return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
+    
+    # Living Reward high enough to not be worth to go for the distant exit,
+    # but low enough to not jum in the pit
     answerDiscount = 0.9
     answerNoise = 0.0
     answerLivingReward = -4.5
     return answerDiscount, answerNoise, answerLivingReward
-    # If not possible, return 'NOT POSSIBLE'
 
 def question3b():
+    
+    # Too much noise, not worth taking chances in the short path
     answerDiscount = 0.6
     answerNoise = 0.4
     answerLivingReward = -0.8
     return answerDiscount, answerNoise, answerLivingReward
-    # If not possible, return 'NOT POSSIBLE'
 
 def question3c():
+    
+    # No noise, so its safe to pass
     answerDiscount = 0.9
     answerNoise = 0.0
     answerLivingReward = -0.2
     return answerDiscount, answerNoise, answerLivingReward
-    # If not possible, return 'NOT POSSIBLE'
 
 def question3d():
+    
+    # Some noise, but too little discount for living, so better not risk to fall
     answerDiscount = 0.9
     answerNoise = 0.1
     answerLivingReward = -0.2
     return answerDiscount, answerNoise, answerLivingReward
-    # If not possible, return 'NOT POSSIBLE'
 
 def question3e():
+    
+    # Living reward positive, so its better to keep alive winning points
     answerDiscount = 0.9
     answerNoise = 0.0
     answerLivingReward = 2
     return answerDiscount, answerNoise, answerLivingReward
-    # If not possible, return 'NOT POSSIBLE'
 
 def question6():
     answerEpsilon = None
     answerLearningRate = None
     # return answerEpsilon, answerLearningRate
+    
+    # Not possible, because there ar too many possibilities of falling in the pit, so 50 interations is not enough to be 
+    # highly likely (greater than 99%) to learn the optimal policy
+    
     # If not possible, return 'NOT POSSIBLE'
     return 'NOT POSSIBLE'
     
